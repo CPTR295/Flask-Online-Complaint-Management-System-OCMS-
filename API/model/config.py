@@ -7,7 +7,7 @@ DB_URL = "postgresql://postgres:admin2255@localhost:5433/ocms"
 engine = create_engine(DB_URL) 
 db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine)) 
 
-base = declarative_base()
+Base = declarative_base()
 
 def init_db():
     import model.db 
