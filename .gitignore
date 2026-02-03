@@ -1,0 +1,5 @@
+venv/
+ocms/
+__pychache__/
+.env
+.pytest_cache/
