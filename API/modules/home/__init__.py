@@ -1,6 +1,9 @@
-from flask import jsonify,request,make_response
-from flask_restful import Resource
+from flask import Blueprint
+from flask_restful import Api
 
-from main_cache import cache
-from model.config import db_session
-from model.db import Category
+home_bp = Blueprint('home_bp',__name__) 
+
+from modules.home.api.index import Hello
+
+api = Api(home_bp) 
+api.add_resource(Hello,'/index')

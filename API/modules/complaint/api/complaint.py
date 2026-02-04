@@ -39,7 +39,7 @@ class UpdateComplainantRestAPI(Resource):
             content = jsonify(message='Error Complaint Patch')
             return make_response(content,500)
 
-class DeleteComplaintDetailsRestAPI(Resource):
+class DeleteComplaintRestAPI(Resource):
     def delete(self,id):
         repo = ComplaintRepository(db_session)
         res = repo.delete(id)
@@ -50,7 +50,7 @@ class DeleteComplaintDetailsRestAPI(Resource):
             content = jsonify(message='Error in Complaint delete') 
             return make_response(content,500)
 
-class UpdateComplaintDetailsRestAPI(Resource):
+class UpdateComplaintRestAPI(Resource):
     def put(self):
         comp_json = request.get_json()
         repo = ComplaintRepository(db_session)
