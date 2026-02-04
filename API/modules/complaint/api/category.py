@@ -37,7 +37,7 @@ class UpdateCategoryNameRestAPI(Resource):
             return make_response(content,201)
         else:
             content = jsonify(message=f'Error in updaing category')
-            return make_repsonse(content,500)
+            return make_response(content,500)
 
 class DeleteCategoryRestAPI(Resource):
     def delete(self,id):
